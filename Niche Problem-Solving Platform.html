@@ -1,0 +1,139 @@
+<html>
+<head>
+    <title>Niche Problem-Solving Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">STEM Problem Solver</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">Post a Problem</a></li>
+                    <li><a href="#" class="hover:underline">Solutions</a></li>
+                    <li><a href="#" class="hover:underline">Premium Access</a></li>
+                    <li><a href="#" class="hover:underline">Community</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8">
+        <section class="bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">Post a Problem</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="title" class="block text-gray-700">Title</label>
+                    <input type="text" id="title" class="w-full p-2 border border-gray-300 rounded mt-1">
+                </div>
+                <div class="mb-4">
+                    <label for="category" class="block text-gray-700">Category</label>
+                    <select id="category" class="w-full p-2 border border-gray-300 rounded mt-1">
+                        <option>Astronomy</option>
+                        <option>Physics</option>
+                        <option>AI</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="description" class="block text-gray-700">Description</label>
+                    <textarea id="description" class="w-full p-2 border border-gray-300 rounded mt-1"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+            </form>
+        </section>
+
+        <section class="mt-8">
+            <h2 class="text-xl font-bold mb-4">Recent Problems</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="text-lg font-bold">Problem 1</h3>
+                    <p class="text-gray-700">Description of problem 1 in astronomy...</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="text-lg font-bold">Problem 2</h3>
+                    <p class="text-gray-700">Description of problem 2 in physics...</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="text-lg font-bold">Problem 3</h3>
+                    <p class="text-gray-700">Description of problem 3 in AI...</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="text-lg font-bold">Problem 4</h3>
+                    <p class="text-gray-700">Description of problem 4 in astronomy...</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="text-lg font-bold">Problem 5</h3>
+                    <p class="text-gray-700">Description of problem 5 in physics...</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="text-lg font-bold">Problem 6</h3>
+                    <p class="text-gray-700">Description of problem 6 in AI...</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">Premium Access</h2>
+            <p class="text-gray-700 mb-4">Get premium access to additional resources and solutions.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Subscribe Now</button>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">Community Forums</h2>
+            <p class="text-gray-700 mb-4">Join our premium community forums for peer learning and discussion.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Join Now</button>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">Advanced Search</h2>
+            <p class="text-gray-700 mb-4">Explore solved problems for similar issues using our advanced search tool.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Search Now</button>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">Visualization Tools</h2>
+            <p class="text-gray-700 mb-4">Integrate visualization tools like Matplotlib and Plotly for data-driven problems.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Learn More</button>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">AI Chatbot</h2>
+            <p class="text-gray-700 mb-4">Get quick guidance or answers to simpler queries using our AI chatbot.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Chat Now</button>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">Leaderboards</h2>
+            <p class="text-gray-700 mb-4">Gamify your problem-solving experience with our community leaderboards.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">View Leaderboards</button>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">Collaboration Tools</h2>
+            <p class="text-gray-700 mb-4">Use our collaboration tools for team-based research tasks.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Collaborate Now</button>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 STEM Problem Solver. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
