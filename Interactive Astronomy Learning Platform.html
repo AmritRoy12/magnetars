@@ -1,97 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Astronomy Learning Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+
+<body class="bg-gray-100 text-gray-800" onload="AOS.init();">
+
+    <!-- Header -->
     <header class="bg-blue-900 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold">Astronomy Learning</h1>
             <nav>
                 <ul class="flex space-x-4">
                     <li><a class="hover:underline" href="#">Home</a></li>
-                    <li><a class="hover:underline" href="#">Simulations</a></li>
                     <li><a class="hover:underline" href="#">Courses</a></li>
-                    <li><a class="hover:underline" href="#">Community</a></li>
+                    <li><a class="hover:underline" href="#">Blog</a></li>
                     <li><a class="hover:underline" href="#">Contact</a></li>
                 </ul>
             </nav>
+            <button onclick="toggleModal('loginModal')"
+                class="bg-white text-blue-900 py-2 px-4 rounded hover:bg-gray-200">Login</button>
         </div>
     </header>
 
-    <main class="container mx-auto mt-8">
-        <section class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold mb-4">Welcome to the Interactive Astronomy Learning Platform</h2>
-            <p class="mb-4">
-                Explore the cosmos with our immersive simulations, AI-powered learning, and interactive educational tools. From real-time celestial simulations to AR/VR stargazing experiences, dive into astronomy like never before.
-            </p>
-            <p class="font-bold">Perfect for hobbyists, educators, and stargazers.</p>
-        </section>
+    <!-- Search Bar -->
+    <div class="container mx-auto mt-6">
+        <input type="text" placeholder="Search for courses or topics..."
+            class="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-900">
+    </div>
 
-        <section class="mt-8">
-            <h2 class="text-2xl font-bold mb-4">Latest Courses</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <img class="w-full h-48 object-cover rounded-t-lg" src="https://via.placeholder.com/300x200" alt="Course Image">
-                    <h3 class="text-xl font-bold mt-4">Exoplanet Discovery Techniques</h3>
-                    <p class="mt-2">Learn how scientists discover exoplanets and the potential for extraterrestrial life.</p>
-                    <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Learn More</button>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <img class="w-full h-48 object-cover rounded-t-lg" src="https://via.placeholder.com/300x200" alt="Course Image">
-                    <h3 class="text-xl font-bold mt-4">Virtual Solar System Tour</h3>
-                    <p class="mt-2">Embark on a journey across planets, moons, and the mysteries of the solar system.</p>
-                    <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Learn More</button>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <img class="w-full h-48 object-cover rounded-t-lg" src="https://via.placeholder.com/300x200" alt="Course Image">
-                    <h3 class="text-xl font-bold mt-4">Beginner’s Guide to Stargazing</h3>
-                    <p class="mt-2">Identify constellations and navigate the night sky using basic tools.</p>
-                    <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Learn More</button>
-                </div>
+    <!-- Welcome Section -->
+    <section class="container mx-auto mt-8 bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4">Welcome to the Interactive Astronomy Learning Platform</h2>
+        <p>Discover the cosmos with AR/VR simulations, gamified education, and exclusive courses. Targeting hobbyists,
+            educators, and enthusiasts, we provide certifications, massive online courses, and more!</p>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="container mx-auto mt-8">
+        <h2 class="text-2xl font-bold mb-4">Our Popular Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up">
+                <img src="https://source.unsplash.com/300x200/?astronomy,exoplanet" alt="Exoplanets"
+                    class="rounded-t-lg w-full h-48 object-cover">
+                <h3 class="text-xl font-bold mt-4">Exploring Exoplanets</h3>
+                <p class="mt-2">Learn about distant worlds and their potential to host life in this exciting course.</p>
+                <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Enroll Now</button>
             </div>
-        </section>
-
-        <section class="mt-8">
-            <h2 class="text-2xl font-bold mb-4">Interactive Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-bold mt-4">AI Learning Assistant</h3>
-                    <p class="mt-2">Ask AI-powered questions on any astronomy topic and receive detailed answers.</p>
-                    <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Try Now</button>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-bold mt-4">AR Stargazing</h3>
-                    <p class="mt-2">Use your device to explore labeled constellations and stars in real-time.</p>
-                    <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Try Now</button>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-bold mt-4">VR Spacewalk</h3>
-                    <p class="mt-2">Experience life on the ISS and learn about its structure and functions.</p>
-                    <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Try Now</button>
-                </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up">
+                <img src="https://source.unsplash.com/300x200/?space,solarsystem" alt="Solar System"
+                    class="rounded-t-lg w-full h-48 object-cover">
+                <h3 class="text-xl font-bold mt-4">Solar System 101</h3>
+                <p class="mt-2">A journey through our solar system, exploring planets and missions.</p>
+                <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Enroll Now</button>
             </div>
-        </section>
-    </main>
-
-    <footer class="bg-blue-900 text-white p-4 mt-8">
-        <div class="container mx-auto text-center">
-            <p>© 2024 Interactive Astronomy Learning Platform. All rights reserved.</p>
-            <div class="mt-4">
-                <a href="#" class="text-white hover:text-gray-300 mx-2"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white hover:text-gray-300 mx-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white hover:text-gray-300 mx-2"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white hover:text-gray-300 mx-2"><i class="fab fa-linkedin-in"></i></a>
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up">
+                <img src="https://source.unsplash.com/300x200/?telescope,stargazing" alt="Stargazing"
+                    class="rounded-t-lg w-full h-48 object-cover">
+                <h3 class="text-xl font-bold mt-4">Stargazing Basics</h3>
+                <p class="mt-2">Perfect for beginners, this course teaches constellations, planets, and telescope use.
+                </p>
+                <button class="mt-4 bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700">Enroll Now</button>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container mx-auto mt-8 bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-4">What Our Learners Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-100 p-4 rounded shadow">
+                <p>"This platform made astronomy accessible and exciting for me. Highly recommended!"</p>
+                <p class="mt-2 font-bold">- Alex J.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded shadow">
+                <p>"I loved the VR spacewalk feature. It felt like being on the ISS!"</p>
+                <p class="mt-2 font-bold">- Priya K.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container mx-auto mt-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+            <button class="w-full text-left text-blue-900 font-bold py-2 focus:outline-none"
+                onclick="toggleAccordion('faq1')">What is the target audience?</button>
+            <div id="faq1" class="hidden">
+                <p class="mt-2">Our platform caters to hobbyists, educators, and amateur astronomers worldwide.</p>
+            </div>
+            <hr class="my-4">
+            <button class="w-full text-left text-blue-900 font-bold py-2 focus:outline-none"
+                onclick="toggleAccordion('faq2')">Are there free courses available?</button>
+            <div id="faq2" class="hidden">
+                <p class="mt-2">Yes, we offer a range of free introductory courses.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white p-4 mt-8">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-between">
+                <div>
+                    <h3 class="text-xl font-bold">Sitemap</h3>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Home</a></li>
+                        <li><a href="#" class="hover:underline">Courses</a></li>
+                        <li><a href="#" class="hover:underline">Blog</a></li>
+                        <li><a href="#" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Newsletter</h3>
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full p-2 rounded mt-2 text-black">
+                    <button class="bg-blue-700 mt-2 py-2 px-4 rounded hover:bg-blue-500">Subscribe</button>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Follow Us</h3>
+                    <div class="flex space-x-2">
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                        <
